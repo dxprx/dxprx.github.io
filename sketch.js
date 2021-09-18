@@ -1,5 +1,5 @@
 function setup() {
-  a = createCanvas(500 , 500, WEBGL);
+  a = createCanvas(windowWidth, windowHeight, WEBGL);
   noFill();
   // slider = createSlider(-PI, PI, 0, 0.01);
   // slider.position(0,475);
