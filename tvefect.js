@@ -1,6 +1,7 @@
 // export tv;
 
-export default function tv () {
+// export default function tv () {
+function tv () {
 	"use strict";
 
 	var canvas = document.querySelector("#tv"),
@@ -89,3 +90,5 @@ export default function tv () {
 };
 
 // module.exports = {tv};
+
+window.tv = tv;

@@ -1,6 +1,6 @@
 
 // const {tv} = require('./tvefect');
-import tv from './tvefect.js';
+// import tv from './tvefect.js';
 
 function setup() {
   a = createCanvas(windowWidth, windowHeight, WEBGL);
@@ -57,7 +57,7 @@ function draw() {
 }
 
 function mouseClicked(){
-  tv();
+  window.tv();
   // console.log(mouseX, mouseY);
   // console.log(windowWidth, windowHeight);
   
