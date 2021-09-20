@@ -37,9 +37,20 @@ function draw() {
 
   stroke(255);
   box(150);
+  
+  applyMatrix(  ct, 0.0,  -ct,  0.0,
+              0.0, 1.0, 0.0,  0.0,
+              st, 0.0,  st,  0.0,
+              ct, 0.0, st,  1.0);
+  stroke(100);
+  
+  let xs = windowWidth/24;
+  let ys = windowHeight/24;
+  sphere(50, Math.round(24-(Math.pow(Math.round(mouseX/xs)-12,2)/6)) , Math.round(24-(Math.pow(Math.round(mouseY/ys)-12,2)/6)));
 }
 
 function mouseClicked(){
-  console.log(mouseX);
+  // console.log(mouseX, mouseY);
+  console.log(windowWidth, windowHeight);
   
 }
