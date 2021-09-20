@@ -44,9 +44,19 @@ function draw() {
               ct, 0.0, st,  1.0);
   stroke(100);
   
-  let xs = windowWidth/24;
-  let ys = windowHeight/24;
-  sphere(50, Math.round(24-(Math.pow(Math.round(mouseX/xs)-12,2)/6)) , Math.round(24-(Math.pow(Math.round(mouseY/ys)-12,2)/6)));
+  let xs = Math.round(24-(Math.pow(Math.round(mouseX/(windowWidth/24))-12,2)/6));
+  let xy = Math.round(24-(Math.pow(Math.round(mouseY/(windowHeight/24))-12,2)/6));
+  
+  if(xs==0){
+    xs=2;
+  }
+  if(xy==0){
+    xy=2;
+  }
+  sphere (50, xs, xy);
+//   let xs = windowWidth/24;
+//   let ys = windowHeight/24;
+//   sphere(50, Math.round(24-(Math.pow(Math.round(mouseX/xs)-12,2)/6)) , Math.round(24-(Math.pow(Math.round(mouseY/ys)-12,2)/6)));
 }
 
 function mouseClicked(){
