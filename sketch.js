@@ -1,6 +1,6 @@
 
-import {tv} from './tvefect';
-
+// const {tv} = require('./tvefect');
+import tv from './tvefect.js';
 
 function setup() {
   a = createCanvas(windowWidth, windowHeight, WEBGL);

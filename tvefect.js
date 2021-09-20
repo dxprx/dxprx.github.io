@@ -1,6 +1,6 @@
-export {tv};
+// export tv;
 
-(function tv () {
+export default function tv () {
 	"use strict";
 
 	var canvas = document.querySelector("#tv"),
@@ -86,4 +86,6 @@ export {tv};
 	}
 	window.onresize();
 	window.requestAnimationFrame(render);
-})();
+};
+
+// module.exports = {tv};
