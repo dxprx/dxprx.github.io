@@ -2,10 +2,14 @@
 // const {tv} = require('./tvefect');
 // import tv from './tvefect.js';
 
-function setup() {
-  a = createCanvas(windowWidth, windowHeight, WEBGL);
-  noFill();
+var w = window.innerWidth;
+var h = window.innerHeight;  
 
+
+
+function setup() {
+  a = createCanvas(w, h, WEBGL);
+  noFill();
 
 
 }
@@ -57,28 +61,28 @@ function draw() {
 }
 
 
-function once(fn, context) { 
-  var result;
-  return function() { 
-      if (fn) {
-          result = fn.apply(context || this, arguments);
-          fn = null;
-      }
-      return result;
-  };
-}
+// function once(fn, context) { 
+//   var result;
+//   return function() { 
+//       if (fn) {
+//           result = fn.apply(context || this, arguments);
+//           fn = null;
+//       }
+//       return result;
+//   };
+// }
 
 
 function mousePressed(){
 
+window.tv();
+  // var one_tv = once(window.tv);
+  // one_tv();
 
-  var one_tv = once(window.tv);
-  one_tv();
-
-  let x = document.getElementById('tv');
-  if(x.style.display === "none"){
-    x.style.display = 'block';
-  }
+  // let x = document.getElementById('tv');
+  // if(x.style.display === "none"){
+  //   x.style.display = 'block';
+  // }
 
 
   
@@ -93,4 +97,11 @@ function mouseReleased(){
 
   document.getElementById('tv').style.display = 'none';
   // window.clearTv();
+}
+
+window.onresize = function() {
+  // assigns new values for width and height variables
+  w = window.innerWidth;
+  h = window.innerHeight;  
+  a.size(w,h);
 }
