@@ -56,9 +56,41 @@ function draw() {
 //   sphere(50, Math.round(24-(Math.pow(Math.round(mouseX/xs)-12,2)/6)) , Math.round(24-(Math.pow(Math.round(mouseY/ys)-12,2)/6)));
 }
 
-function mouseClicked(){
-  window.tv();
+
+function once(fn, context) { 
+  var result;
+  return function() { 
+      if (fn) {
+          result = fn.apply(context || this, arguments);
+          fn = null;
+      }
+      return result;
+  };
+}
+
+
+function mousePressed(){
+
+
+  var one_tv = once(window.tv);
+  one_tv();
+
+  let x = document.getElementById('tv');
+  if(x.style.display === "none"){
+    x.style.display = 'block';
+  }
+
+
+  
+
   // console.log(mouseX, mouseY);
   // console.log(windowWidth, windowHeight);
   
+}
+
+function mouseReleased(){
+  console.log('a');
+
+  document.getElementById('tv').style.display = 'none';
+  // window.clearTv();
 }

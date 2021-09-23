@@ -89,6 +89,15 @@ function tv () {
 	window.requestAnimationFrame(render);
 };
 
+function clearTv(){
+    var canvas = document.querySelector("#tv"),
+		context = canvas.getContext("gl") || canvas.getContext("2d");
+
+    context.clearRect(0, 0, canvas.width, canvas.height);
+}
+
 // module.exports = {tv};
+
+window.clearTv = clearTv;
 
 window.tv = tv;
