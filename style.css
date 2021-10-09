@@ -6,10 +6,22 @@ html, body, #tv{
 }
 body{
 	background-color: #c8c8c8;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 canvas {
-  display: block;
+  	display: block;
 }
+
+#container {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	
+  }
+#container canvas, #flex-container {
+	position: absolute;
+  }
 
 /* .mySliders{
  width: 500px; 
@@ -41,3 +53,92 @@ canvas {
 	-webkit-perspective: 1000;
 	/* display:none; */
 }
+
+#flex-container{
+	margin: 5%;
+	padding: 200%;
+	height: 75%;
+    width:  90%;
+	
+	
+	padding: 10px ;
+	box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, .15);
+	
+	backdrop-filter: blur(5px);
+}
+
+#newUrlButton{
+	background-color: rgba(255, 255, 255, .15);
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	
+	backdrop-filter: blur(100px);
+	opacity:0.6;
+	transition: 0.3s;
+	border: none;
+	color: dimgray;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 24px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 2px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+
+}
+
+#newUrlButton:hover{
+	opacity: 1
+}
+
+.botonUrl{
+
+	text-transform: capitalize;
+	width: 200px;
+	height: 200px;
+	background-color: rgba(0, 0, 0, 0.5);
+ 	border: none;
+ 	color: white;
+ 	padding: 16px 32px;
+ 	text-align: center;
+ 	font-size: 16px;
+ 	margin: 4px 2px;
+ 	opacity: 0.6;
+ 	transition: 0.3s;
+ 	display: inline-block;
+ 	text-decoration: none;
+ 	cursor: pointer;
+}
+
+.botonUrl:hover {
+	opacity: 1
+}
+
+
+
+
+#nameNewUrl, #urlNewUrl{
+	background-color: rgba(255, 255, 255, .15);
+	
+	backdrop-filter: blur(100px);
+	transition: 0.3s;
+	border: none;
+	color: black;
+	padding: 15px 32px;
+	text-align: left;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 24px;
+	margin: 4px 2px;
+	border-radius: 2px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	
+}
+
