@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pose 08
+* source:	https://sketchfab.com/3d-models/pose-08-a7704b43d4e14637af58d47f04bdfc04
+* author:	pangeni (https://sketchfab.com/pangeni)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pose 08" (https://sketchfab.com/3d-models/pose-08-a7704b43d4e14637af58d47f04bdfc04) by pangeni (https://sketchfab.com/pangeni) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
