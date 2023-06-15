@@ -28,4 +28,14 @@ $(function() {
 
     indicator.css('top', indicatorPosition);
   }
+
+  $(document).ready(function() {
+    $('.link').click(function(event) {
+      event.preventDefault();
+      var sectionName = $(this).data('section-name');
+      $.scrollify.move(sectionName);
+    });
+  });
+  
 });
+
