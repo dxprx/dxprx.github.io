@@ -28,14 +28,17 @@ $(function() {
 
     indicator.css('top', indicatorPosition);
   }
-
-  $(document).ready(function() {
-    $('.link').click(function(event) {
-      event.preventDefault();
-      var sectionName = $(this).data('section-name');
-      $.scrollify.move(sectionName);
-    });
-  });
   
+  $('.face').click(function() {
+    var sectionName = $(this).data('section-name');
+    var sectionElement = document.querySelector('#' + sectionName);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(function() {
+        $.scrollify.instantMove(sectionName);
+        $.scrollify.update();
+      }, 1000); // Ajusta el tiempo según sea necesario para que coincida con la duración del desplazamiento suave
+      
+    }
+  });
 });
-
