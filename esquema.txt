@@ -1,9 +1,0 @@
-PORTFOLIO
-
-Seccion cubo : Cubo
-Seccion 1 : Presentacion
-Seccion 2 : Skills
-Seccion 3 : Experiencia laboral
-Seccion 4 : Proyectos
-Seccion 5 : Aficiones
-Seccion 6 : Contacto

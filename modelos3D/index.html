@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>AI Generated AI Models</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../main.css'>
+    <script src='main.js'></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <a href="../index.html" id="home">
+        <span class="material-symbols-outlined">
+            arrow_back
+        </span>
+        <p>Home</p>
+    </a>
+    <div class="container">
+        <h1>AI Generated 3D models</h1>
+        <br>
+        <a href="https://lumalabs.ai/genie" target="_blank">
+            <h2>Lumalabs Genie</h2>
+        </a>
+        <a href="https://modelviewer.dev/" target="_blank">
+            <h2>Model Viewer</h2>
+        </a>
+    </div>
+    <div class="container">
+        <div>
+            <!-- skybox-image="posters/empty_workshop_8k.hdr" -->
+            <model-viewer loading="eager" src="models/1b.glb" ar ar-modes="webxr scene-viewer quick-look"
+                camera-controls poster="posters/1b.webp" shadow-intensity="1.44" exposure="0.63" shadow-softness="0.59"
+                environment-image="legacy">
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+
+            </model-viewer>
+            <div class="settings">
+                <label for="exposure">Exposure</label>
+                <input type="range" class="exposure" name="exposure" min="0" max="2" step="any">
+                <label for="shadow-intensity">Shadow intensity</label>
+                <input type="range" class="shadow-intensity" name="shadow-intensity" min="0" max="2" step="any">
+                <label for="shadow-softness">Shadow softness</label>
+                <input type="range" class="shadow-softness" name="shadow-softness" min="0" max="1" step="any">
+                <input type="button" class="hide-btn" value="Hide options">
+            </div>
+            <input type="button" class="display-btn" value="Display options">
+        </div>
+        <div>
+            <model-viewer loading="eager" src="models/3b.glb" ar ar-modes="webxr scene-viewer quick-look"
+                camera-controls poster="posters/2b.webp" shadow-intensity="1.44" exposure="0.63" shadow-softness="0.59"
+                environment-image="legacy">
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+            </model-viewer>
+            <div class="settings">
+                <label for="exposure">Exposure</label>
+                <input type="range" class="exposure" name="exposure" min="0" max="2" step="any">
+                <label for="shadow-intensity">Shadow intensity</label>
+                <input type="range" class="shadow-intensity" name="shadow-intensity" min="0" max="2" step="any">
+                <label for="shadow-softness">Shadow softness</label>
+                <input type="range" class="shadow-softness" name="shadow-softness" min="0" max="1" step="any">
+                <input type="button" class="hide-btn" value="Hide options">
+            </div>
+            <input type="button" class="display-btn" value="Display options">
+        </div>
+        <div>
+            <model-viewer loading="eager" src="models/2b.glb" ar ar-modes="webxr scene-viewer quick-look"
+                camera-controls poster="posters/3b.webp" shadow-intensity="1.44" exposure="0.63" shadow-softness="0.59"
+                environment-image="legacy">
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+            </model-viewer>
+            <div class="settings">
+                <label for="exposure">Exposure</label>
+                <input type="range" class="exposure" name="exposure" min="0" max="2" step="any">
+                <label for="shadow-intensity">Shadow intensity</label>
+                <input type="range" class="shadow-intensity" name="shadow-intensity" min="0" max="2" step="any">
+                <label for="shadow-softness">Shadow softness</label>
+                <input type="range" class="shadow-softness" name="shadow-softness" min="0" max="1" step="any">
+                <input type="button" class="hide-btn" value="Hide options">
+            </div>
+            <input type="button" class="display-btn" value="Display options">
+        </div>
+    </div>
+
+    <script>
+
+        document.querySelectorAll('.exposure').forEach(ele => {
+            let viewer = ele.parentElement.previousElementSibling;
+            let input2 = ele.nextElementSibling.nextElementSibling;
+            let input3 = input2.nextElementSibling.nextElementSibling;
+            ele.addEventListener("change", function () {
+                viewer.setAttribute('exposure', this.value);
+            });
+            input2.addEventListener("change", function () {
+                viewer.setAttribute('shadow-intensity', this.value);
+            });
+            input3.addEventListener("change", function () {
+                viewer.setAttribute('shadow-softness', this.value);
+            });
+        })
+
+        document.querySelectorAll('.display-btn').forEach(ele => {
+            ele.addEventListener("click", function () {
+                ele.previousElementSibling.style.display = 'flex';
+                ele.style.display = 'none';
+            })
+        })
+
+        document.querySelectorAll('.hide-btn').forEach(ele => {
+            ele.addEventListener("click", function () {
+                ele.parentElement.style.display = 'none';
+                ele.parentElement.nextElementSibling.style.display = 'flex';
+            })
+        })
+    </script>
+</body>
+
+</html>
